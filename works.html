@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Works | musica allegra</title>
+<meta name="description" content="musica allegra の参加作品">
+<meta property="og:title" content="Works | musica allegra">
+<meta property="og:description" content="musica allegra の参加作品">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://musicaallegra.github.io/img/hero.jpg">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;600&family=Sacramento&family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--brown:#512c1d;--red:#8b0000;--paper:#f4f1ea;--bar:#f0efed;--barh:128px}
+*{box-sizing:border-box}
+html{scroll-padding-top:16px}
+body{margin:0;color:var(--brown);background:#fff;font-family:"メイリオ",Meiryo,"Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;font-size:13px;line-height:1.6;padding-bottom:var(--barh)}
+a{color:inherit}
+img{max-width:100%;display:block}
+.hero{position:relative;overflow:hidden;height:41vh;height:41svh;min-height:260px;background:#2b1a12}
+.hero .s{position:absolute;inset:0;background:center/cover no-repeat;opacity:0;transition:opacity 1s ease-in-out}
+.hero .s.on{opacity:1}
+.hero h1{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+/* fixed bottom bar, as on the original site */
+.bar{position:fixed;left:0;right:0;bottom:0;height:var(--barh);z-index:10;background:var(--bar);
+ background-image:repeating-linear-gradient(45deg,rgba(0,0,0,.018) 0 2px,transparent 2px 5px);border-top:1px solid #e3e1dc}
+.bar .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none;line-height:1.1;flex:none;display:flex;align-items:center;gap:20px}
+.brand img{height:92px;width:auto;mix-blend-mode:multiply}
+
+.brand b{display:block;font:500 30px/1 "Zilla Slab",Clarendon,Georgia,serif;letter-spacing:.09em}
+.brand i{display:block;margin-top:6px;font:italic 12px/1 "Helvetica Neue",Arial,sans-serif;color:var(--red);text-decoration:underline;text-underline-offset:3px;letter-spacing:.02em}
+nav{display:flex;gap:6px;font-family:Enriqueta,Georgia,serif;font-size:15px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{text-decoration:none;padding:10px 16px;white-space:nowrap;border-radius:4px}
+nav a:hover,nav a:focus-visible{color:var(--red);background:rgba(81,44,29,.06)}
+nav a[aria-current]{opacity:.7}
+/* works */
+.works{background:linear-gradient(rgba(255,255,255,.6),rgba(255,255,255,.6)),var(--paper) url(img/wood.jpg) center/cover;padding:44px 0 36px}
+h2{font:500 38px/1.1 "Zilla Slab",Clarendon,Georgia,serif;letter-spacing:.05em;margin:0 0 22px}
+.works h3{font:italic 400 17px/1.3 "Helvetica Neue",Arial,sans-serif;color:var(--red);margin:26px 0 14px}
+.works h3:first-of-type{margin-top:0}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px 28px}
+.grid a{text-decoration:none;display:block}
+.who{margin:0 0 6px;font-size:11px;line-height:1.45;height:4.35em;display:flex;align-items:flex-end;overflow:hidden;overflow-wrap:anywhere}
+.who span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.jk{aspect-ratio:1;overflow:hidden}
+.jk img{width:100%;height:100%;object-fit:contain;object-position:center top;transition:transform .25s}
+.grid a:hover img,.grid a:focus-visible img{transform:scale(1.04)}
+.noimg{display:flex;height:100%;align-items:center;justify-content:center;text-align:center;padding:8px;font:500 12px/1.3 "Zilla Slab",Georgia,serif;color:#8a7868;border:1px dashed #c9bfae}
+.cr{margin:8px 0 0;min-height:4.5em;font-size:11px;font-style:italic;line-height:1.5}
+.more{text-align:right;margin:6px 0 0;font:italic 15px "Helvetica Neue",Arial,sans-serif}
+.more a{color:var(--brown);text-decoration:none}.more a:hover{color:var(--red);text-decoration:underline}
+/* studio */
+.studio{padding:48px 0 56px}
+.cols{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:36px}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.photos img{width:100%;height:100%;object-fit:cover}
+.photos .tall{aspect-ratio:5/8}
+.photos .wide{grid-column:1/-1;aspect-ratio:16/9}
+.script{font:400 30px/1 Sacramento,cursive;margin:0 0 10px}
+dl{margin:0;font-family:Enriqueta,Georgia,serif;font-size:14px;line-height:1.75}
+dt{margin-top:2px}dd{margin:0 0 0 1.2em;white-space:pre-wrap}
+.mail{display:inline-block;margin-top:24px;padding:11px 44px;border:2px solid var(--brown);text-decoration:none;font-size:12px}
+.mail:hover{background:var(--brown);color:#fff}
+.sns{display:flex;gap:10px;margin-top:16px}
+.sns a{width:38px;height:38px;border-radius:6px;display:grid;place-items:center;color:#fff}
+.sns svg{width:22px;height:22px;fill:currentColor}
+@media (max-width:860px){
+ :root{--barh:104px}
+ .bar .wrap{flex-direction:column;align-items:stretch;justify-content:center;gap:4px;padding:0 12px}
+ .brand{gap:10px}.brand img{height:46px}.brand span{display:flex;align-items:baseline;gap:10px}.brand b{font-size:19px;white-space:nowrap}.brand i{margin:0;font-size:10px;white-space:nowrap}
+ nav{font-size:13.5px;gap:0;margin:0 -6px;justify-content:space-between}nav a{padding:8px 7px}
+ .grid{grid-template-columns:repeat(3,1fr);gap:22px 16px}
+ .cols{grid-template-columns:1fr}
+ h2{font-size:32px}
+}
+@media (max-width:420px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.jk img{transition:none}}
+
+/* ---- pages ---- */
+.page[hidden]{display:none}
+.page{min-height:calc(100vh - var(--barh))}
+.phero{position:relative;height:41vh;height:41svh;min-height:260px;background:#2b1a12 center/cover no-repeat;display:flex;align-items:flex-end}
+.phero .wrap{width:100%;text-align:right;color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.45);padding-bottom:22px}
+.phero .script{font-size:44px;margin:0 60px -6px 0;color:#fff}
+.phero h1{font:500 84px/1 "Zilla Slab",Clarendon,Georgia,serif;letter-spacing:.04em;margin:0}
+.ptitle{text-align:center;padding:64px 20px 40px}
+.ptitle h1{font:500 50px/1.1 "Zilla Slab",Clarendon,Georgia,serif;letter-spacing:.05em;margin:0 0 12px}
+.ptitle p{font:15px Enriqueta,Georgia,serif;letter-spacing:.06em;margin:0}
+.studio.tight{padding-top:8px}
+.works.full{padding-bottom:56px}
+.works.full .who{height:5.8em}.works.full .who span{-webkit-line-clamp:4}
+.works h3{scroll-margin-top:16px}
+.lm{display:flex;flex-wrap:wrap;gap:8px 30px}
+.lmg h4{font:400 12px/1.4 inherit;margin:0 0 6px}
+.grid.sm{display:flex;flex-wrap:wrap;gap:10px 16px}
+.grid.sm li{width:92px}
+.grid.sm .cr{min-height:3.2em;font-style:normal;font-size:10px;margin-top:5px}
+.sound{list-style:none;margin:0;padding:0;font-size:12px;line-height:1.9}
+/* menu */
+.mcols{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1fr);gap:44px;padding-top:44px;padding-bottom:56px}
+.mphotos figure{margin:0 0 26px}
+.mphotos figcaption{font-size:14px;margin-top:8px}
+.mphotos .pair{display:grid;grid-template-columns:1fr .94fr;gap:14px;align-items:start}
+.mphotos .wave{width:62%;margin-left:auto}
+.order{font-family:Enriqueta,Georgia,"Hiragino Mincho ProN",serif;font-size:14px;line-height:1.75}
+.order h2{margin-bottom:18px}
+.order h4{font-size:15px;font-weight:600;margin:22px 0 6px}
+.order p{margin:0 0 8px 1em}
+.order .n{font-size:13px}
+.order .r{color:#d0021b}
+.order .c{margin-top:16px;font-weight:600}
+.order .ctr{text-align:center;margin:28px 0 0}
+.order .mail{margin-left:1em}
+/* contact */
+.cbox{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center;padding:18vh 20px}
+.cbox .mail,.cbox .sns{margin-top:0}
+/* news */
+.newsp{padding:36px 0 60px}
+.npanel{background:#dbb89a;border-right:6px solid #7a1c1c;border-radius:4px;padding:34px 44px 44px;box-shadow:0 1px 6px rgba(0,0,0,.12)}
+.npanel h1{font:500 30px/1.1 "Zilla Slab",Clarendon,Georgia,serif;letter-spacing:.08em;margin:0 0 26px}
+.npanel article{margin:0 0 22px;max-width:640px}
+.npanel time{display:block;color:#b00000;font:600 12px Enriqueta,Georgia,serif}
+.npanel p{margin:2px 0 0;font-size:13px}
+.npanel img{margin-top:10px;width:260px}
+@media (max-width:860px){
+ .phero h1{font-size:56px}.phero .script{font-size:34px;margin-right:30px}
+ .ptitle{padding:44px 20px 28px}.ptitle h1{font-size:38px}
+ .mcols{grid-template-columns:1fr;gap:28px}
+ .npanel{padding:26px 22px 30px}
+}
+</style>
+</head>
+<body>
+<main>
+<!-- ================= Works ================= -->
+<div class="page">
+<header class="phero" style="background-image:url(img/works-hero.jpg)"><div class="wrap"><p class="script">more</p><h1>Works</h1></div></header>
+<section class="works full"><div class="wrap">
+<h2>Works</h2>
+<h3>produce / recording / edit / mix</h3><ul class="grid"><li><a href="https://music.apple.com/jp/album/shake-ep/1633996094" target="_blank" rel="noopener"><p class="who"><span>陽真<br>しぇいく</span></p><div class="jk"><img src="img/jkt-shake.jpg" alt="陽真 / しぇいく" loading="lazy"></div></a><p class="cr">All trks<br>produce,rec,mix</p></li><li><a href="https://music.apple.com/jp/album/sosogu-single/1604623865" target="_blank" rel="noopener"><p class="who"><span>陽真<br>SOSOGU</span></p><div class="jk"><img src="img/jkt-sosogu.jpg" alt="陽真 / SOSOGU" loading="lazy"></div></a><p class="cr">All trks<br>produce,rec,mix</p></li><li><a href="https://itunes.apple.com/jp/album/one-heart-special-pack/1349572924" target="_blank" rel="noopener"><p class="who"><span>UNIONE<br>ONE HEART</span></p><div class="jk"><img src="img/jkt-one-heart.jpg" alt="UNIONE / ONE HEART" loading="lazy"></div></a><p class="cr">M2,4,8,11,12<br>M6,9 produce,rec<br>M3 rec,mix<br>M7 rec<br>DVD live mix</p></li><li><a href="https://music.apple.com/jp/album/%E7%84%A1%E9%99%90%E3%81%A8%E7%9E%AC%E3%81%8D-ep/1485354758" target="_blank" rel="noopener"><p class="who"><span>ドアノブロック<br>無限と瞬き</span></p><div class="jk"><img src="img/jkt-mugen.jpg" alt="ドアノブロック / 無限と瞬き" loading="lazy"></div></a><p class="cr">All trks  direction,rec</p></li><li><a href="https://itunes.apple.com/jp/album/anata-no-shiranai-watashitachi-single/1441991660" target="_blank" rel="noopener"><p class="who"><span>chay<br>あなたの知らない私たち</span></p><div class="jk"><img src="img/jkt-anata.jpg" alt="chay / あなたの知らない私たち" loading="lazy"></div></a><p class="cr">M2 produce,rec,mix</p></li><li><a href="https://music.apple.com/jp/album/cupola/1640003595" target="_blank" rel="noopener"><p class="who"><span>東京○X問題<br>cupola</span></p><div class="jk"><img src="img/jkt-cupola.jpg" alt="東京○X問題 / cupola" loading="lazy"></div></a><p class="cr">All trks<br>rec,mix,direction</p></li><li><a href="https://itunes.apple.com/jp/album/%E3%83%91%E3%83%83%E3%82%B5%E3%83%9C%E3%83%BC%E3%83%A9-ep/1211075163" target="_blank" rel="noopener"><p class="who"><span>UNIONE<br>パッサボーラ！</span></p><div class="jk"><img src="img/jkt-passabola.jpg" alt="UNIONE / パッサボーラ！" loading="lazy"></div></a><p class="cr">All trks<br>M1,2,3 arrangement<br>M6-9  live mix</p></li><li><a href="https://itunes.apple.com/jp/album/%E3%83%AD%E3%83%B3%E3%83%87%E3%82%A3-special-pack-ep/1292281440" target="_blank" rel="noopener"><p class="who"><span>UNIONE<br>ロンディ</span></p><div class="jk"><img src="img/jkt-rondi.jpg" alt="UNIONE / ロンディ" loading="lazy"></div></a><p class="cr">M1,5 rec<br>M2,3,4</p></li><li><a href="https://itunes.apple.com/jp/album/sexy-sexy-sexy-ep/1261239834" target="_blank" rel="noopener"><p class="who"><span>UNIONE<br>SEXY SEXY SEXY</span></p><div class="jk"><img src="img/jkt-sexy.jpg" alt="UNIONE / SEXY SEXY SEXY" loading="lazy"></div></a><p class="cr">M1 rec,mix<br>M2,3,4<br>M5,6,7 live mix<br>M3 arrange,programming</p></li><li><a href="https://itunes.apple.com/jp/album/%E6%9C%AA%E6%9D%A5delight-ep/1160118961" target="_blank" rel="noopener"><p class="who"><span>UNIONE<br>未来DELIGHT</span></p><div class="jk"><img src="img/jkt-mirai-delight.jpg" alt="UNIONE / 未来DELIGHT" loading="lazy"></div></a><p class="cr">M1 produce,rec<br>M2,3,4<br>M4 programming</p></li><li><a href="https://itunes.apple.com/jp/album/one-sided-love-ep/1126757946" target="_blank" rel="noopener"><p class="who"><span>UNIONE<br>ONE SIDED LOVE</span></p><div class="jk"><img src="img/jkt-one-sided-love.jpg" alt="UNIONE / ONE SIDED LOVE" loading="lazy"></div></a><p class="cr">M1 produce,rec<br>M2,3,4</p></li><li><div class="nolink"><p class="who"><span>UNIONE<br>greetings</span></p><div class="jk"><img src="img/jkt-greetings.jpg" alt="UNIONE / greetings" loading="lazy"></div></div><p class="cr">All trks</p></li></ul><h3>produce</h3><ul class="grid"><li><a href="https://itunes.apple.com/jp/album/fo-u-r/569849642" target="_blank" rel="noopener"><p class="who"><span>CHEMISTRY<br>fo(u)r</span></p><div class="jk"><img src="img/jkt-four.jpg" alt="CHEMISTRY / fo(u)r" loading="lazy"></div></a><p class="cr">M2,7,10,12</p></li><li><a href="https://itunes.apple.com/jp/album/23/888174023" target="_blank" rel="noopener"><p class="who"><span>RYTHEM<br>23</span></p><div class="jk"><img src="img/jkt-rythem23.jpg" alt="RYTHEM / 23" loading="lazy"></div></a><p class="cr">All trks</p></li><li><a href="https://itunes.apple.com/jp/album/%E3%82%B3%E3%82%B3%E3%83%AD%E3%83%95%E3%82%A3%E3%83%AB%E3%83%A0%E3%83%8E%E3%83%BC%E3%83%88/210621162" target="_blank" rel="noopener"><p class="who"><span>SOFFet<br>ココロフィルムノート</span></p><div class="jk"><img src="img/jkt-kokoro.jpg" alt="SOFFet / ココロフィルムノート" loading="lazy"></div></a><p class="cr">M8-12 direction</p></li><li><a href="https://itunes.apple.com/jp/album/%E5%8A%A0%E9%82%A3-%E3%82%A4%E3%83%88%E3%82%B7%E3%82%AD%E3%83%92%E3%83%88%E3%83%A8/326558911" target="_blank" rel="noopener"><p class="who"><span>城南海<br>加那-イトシキヒトヨ-</span></p><div class="jk"><img src="img/jkt-kana.jpg" alt="城南海 / 加那-イトシキヒトヨ-" loading="lazy"></div></a><p class="cr">M3</p></li><li><a href="https://music.apple.com/jp/album/best-of-jimama-%E5%90%9B%E3%81%AB%E8%B4%88%E3%82%8B%E3%81%86%E3%81%9F/1536260163" target="_blank" rel="noopener"><p class="who"><span>ji ma ma<br>裸足　からびさー</span></p><div class="jk"><img src="img/jkt-jimama.jpg" alt="ji ma ma / 裸足　からびさー" loading="lazy"></div></a><p class="cr">All trks</p></li><li><a href="https://itunes.apple.com/jp/album/a-day-in-the-life/882517009" target="_blank" rel="noopener"><p class="who"><span>GAKU MC<br>a day in the life</span></p><div class="jk"><img src="img/jkt-gakumc.jpg" alt="GAKU MC / a day in the life" loading="lazy"></div></a><p class="cr">All trks *co-produce</p></li><li><a href="https://itunes.apple.com/jp/album/%E5%84%AA%E3%81%97%E3%81%84%E3%81%A0%E3%81%91%E3%81%AE%E7%94%B7-single/168726241" target="_blank" rel="noopener"><p class="who"><span>戸田康平<br>優しいだけの男</span></p><div class="jk"><img src="img/jkt-yasashii.jpg" alt="戸田康平 / 優しいだけの男" loading="lazy"></div></a><p class="cr">All trks</p></li><li><a href="https://itunes.apple.com/jp/album/%E6%98%A5%E9%A2%A8-single/921369947" target="_blank" rel="noopener"><p class="who"><span>戸田康平<br>春風</span></p><div class="jk"><img src="img/jkt-harukaze.jpg" alt="戸田康平 / 春風" loading="lazy"></div></a><p class="cr">All trks</p></li><li><div class="nolink"><p class="who"><span>S.N.A（韓国）<br>Mr.S.N.A</span></p><div class="jk"><img src="img/jkt-sna.jpg" alt="S.N.A（韓国） / Mr.S.N.A" loading="lazy"></div></div><p class="cr">M1</p></li><li><a href="https://www.amazon.co.jp/dp/B000P28RKS" target="_blank" rel="noopener"><p class="who"><span>郷ひろみ<br>Come On Baby</span></p><div class="jk"><img src="img/jkt-come-on-baby.jpg" alt="郷ひろみ / Come On Baby" loading="lazy"></div></a><p class="cr">M2,3</p></li><li><a href="https://www.amazon.co.jp/dp/B000J20UYK" target="_blank" rel="noopener"><p class="who"><span>郷ひろみ<br>Winter Mood</span></p><div class="jk"><img src="img/jkt-winter-mood.jpg" alt="郷ひろみ / Winter Mood" loading="lazy"></div></a><p class="cr">M1,2,3,5</p></li><li><a href="https://www.amazon.co.jp/dp/B000GLKNK0" target="_blank" rel="noopener"><p class="who"><span>郷ひろみ<br>LIFE</span></p><div class="jk"><img src="img/jkt-life.jpg" alt="郷ひろみ / LIFE" loading="lazy"></div></a><p class="cr">All trks</p></li><li><a href="https://www.amazon.co.jp/dp/B00172RMZG" target="_blank" rel="noopener"><p class="who"><span>郷ひろみ<br>place to be</span></p><div class="jk"><img src="img/jkt-place-to-be.jpg" alt="郷ひろみ / place to be" loading="lazy"></div></a><p class="cr">M8</p></li><li><a href="https://www.amazon.co.jp/dp/B00156ZY22" target="_blank" rel="noopener"><p class="who"><span>郷ひろみ<br>君だけを feat.童子-T</span></p><div class="jk"><img src="img/jkt-kimidake.jpg" alt="郷ひろみ / 君だけを feat.童子-T" loading="lazy"></div></a><p class="cr">M2</p></li><li><div class="nolink"><p class="who"><span>GREEN STYLE BAND<br>パパママ・プリーズ！</span></p><div class="jk"><img src="img/jkt-green-style-band.jpg" alt="GREEN STYLE BAND / パパママ・プリーズ！" loading="lazy"></div></div><p class="cr">All trks</p></li><li><a href="https://www.amazon.co.jp/dp/B000J4S6E4" target="_blank" rel="noopener"><p class="who"><span>Billy Joel Tribute<br>WANNA BE THE PIANO MAN</span></p><div class="jk"><img src="img/jkt-billy.jpg" alt="Billy Joel Tribute / WANNA BE THE PIANO MAN" loading="lazy"></div></a><p class="cr">M8</p></li><li><a href="https://itunes.apple.com/jp/album/music-is-my-life/570054196" target="_blank" rel="noopener"><p class="who"><span>福原美穂<br>Music is My Life</span></p><div class="jk"><img src="img/jkt-fukuhara.jpg" alt="福原美穂 / Music is My Life" loading="lazy"></div></a><p class="cr">M6</p></li><li><a href="https://music.apple.com/jp/album/good-times-bad-times/1575895824?i=1575895832" target="_blank" rel="noopener"><p class="who"><span>郷ひろみ<br>Good Times,Bad times</span></p><div class="jk"><img src="img/jkt-mouiino.jpg" alt="郷ひろみ / Good Times,Bad times" loading="lazy"></div></a><p class="cr">M2</p></li></ul><h3>recording / edit / mix</h3><ul class="grid"><li><a href="https://music.apple.com/jp/album/%E8%99%B9%E8%89%B2%E3%82%B3%E3%83%8D%E3%82%AF%E3%83%88/6784653672?i=6784653784" target="_blank" rel="noopener"><p class="who"><span>陽真<br>虹色コネクト</span></p><div class="jk"><img src="img/jkt-nijiiro.jpg" alt="陽真 / 虹色コネクト" loading="lazy"></div></a><p class="cr">rec,mix</p></li><li><a href="https://music.apple.com/jp/album/polaroid/1857563525" target="_blank" rel="noopener"><p class="who"><span>NACHERRY<br>Polaroid</span></p><div class="jk"><img src="img/jkt-polaroid.jpg" alt="NACHERRY / Polaroid" loading="lazy"></div></a><p class="cr">All trks mix</p></li><li><a href="https://music.apple.com/jp/album/my-dream-girls-single/1727094260" target="_blank" rel="noopener"><p class="who"><span>NACHERRY<br>My dream girls</span></p><div class="jk"><img src="img/jkt-my-dream-girls.jpg" alt="NACHERRY / My dream girls" loading="lazy"></div></a><p class="cr">M3 mix</p></li><li><a href="https://music.apple.com/jp/album/1st-live-album-lets-start-the-party-at-kt-zepp-yokohama/1857561423" target="_blank" rel="noopener"><p class="who"><span>NACHERRY<br>&quot;Let&#x27;s start the party!!&quot;</span></p><div class="jk"><img src="img/jkt-party.jpg" alt="NACHERRY / &quot;Let&#x27;s start the party!!&quot;" loading="lazy"></div></a><p class="cr">All trks mix</p></li><li><a href="https://music.apple.com/jp/album/asano-ep/1582193624" target="_blank" rel="noopener"><p class="who"><span>TEAM SHACHI<br>浅野EP</span></p><div class="jk"><img src="img/jkt-asano.jpg" alt="TEAM SHACHI / 浅野EP" loading="lazy"></div></a><p class="cr">M2,3,4 mix</p></li><li><a href="https://music.apple.com/jp/album/honey-awake-single/1563396852" target="_blank" rel="noopener"><p class="who"><span>TEAM SHACHI<br>HONEY / AWAKE</span></p><div class="jk"><img src="img/jkt-honey.jpg" alt="TEAM SHACHI / HONEY / AWAKE" loading="lazy"></div></a><p class="cr">M1,2 rec,edit,mix</p></li><li><a href="https://music.apple.com/jp/album/rocket-queen-feat-mcu-rock-away-single/1480845337" target="_blank" rel="noopener"><p class="who"><span>TEAM SHACHI<br>Rocket Queen feat.MCU</span></p><div class="jk"><img src="img/jkt-rocket.jpg" alt="TEAM SHACHI / Rocket Queen feat.MCU" loading="lazy"></div></a><p class="cr">M2 vocal rec,edit</p></li><li><a href="https://www.hmv.co.jp/artist_%E5%8F%A4%E5%86%85%E6%9D%B1%E5%AD%90_000000000008988/item_%E3%80%8C25th-ANNIVERSARY-LIVE-2018-Toko-Furuuchi%E3%80%8D_9285134" target="_blank" rel="noopener"><p class="who"><span>古内東子<br>25TH ANNIVERSARY LIVE</span></p><div class="jk"><img src="img/jkt-furuuchi25.jpg" alt="古内東子 / 25TH ANNIVERSARY LIVE" loading="lazy"></div></a><p class="cr">All trks edit</p></li><li><a href="https://music.apple.com/jp/album/love-letter-poetry/1201146869" target="_blank" rel="noopener"><p class="who"><span>SOFFet<br>Love Letter Poetry</span></p><div class="jk"><img src="img/jkt-loveletter.jpg" alt="SOFFet / Love Letter Poetry" loading="lazy"></div></a><p class="cr">M2,3,4 vocal rec</p></li><li><a href="https://www.sonymusicshop.jp/m/item/itemShw.php?associate=SMO&amp;cd=ESCL000005158" target="_blank" rel="noopener"><p class="who"><span>松下奈緒<br>Synchro</span></p><div class="jk"><img src="img/jkt-matsushita.jpg" alt="松下奈緒 / Synchro" loading="lazy"></div></a><p class="cr">M4 bv rec</p></li><li><a href="https://shachi.lnk.to/JIBUNGOTO" target="_blank" rel="noopener"><p class="who"><span>TEAM SHACHI<br>JIBUNGOTO</span></p><div class="jk"><img src="img/jkt-jibungoto.jpg" alt="TEAM SHACHI / JIBUNGOTO" loading="lazy"></div></a><p class="cr">M1 rec,edit</p></li><li><a href="https://music.apple.com/jp/album/mama/1523739541?i=1523739546" target="_blank" rel="noopener"><p class="who"><span>TEAM SHACHI<br>SURVIVOR SURVIVOR</span></p><div class="jk"><img src="img/jkt-survivor.jpg" alt="TEAM SHACHI / SURVIVOR SURVIVOR" loading="lazy"></div></a><p class="cr">M2 rec,edit<br>M3 rec,edit,mix</p></li><li><a href="https://itunes.apple.com/jp/album/team-shachi-ep/1446288203" target="_blank" rel="noopener"><p class="who"><span>TEAM SHACHI<br>TEAM SHACHI - EP</span></p><div class="jk"><img src="img/jkt-shachi-ep.jpg" alt="TEAM SHACHI / TEAM SHACHI - EP" loading="lazy"></div></a><p class="cr">M1 mix</p></li><li><a href="https://www.amazon.co.jp/dp/B0006U0HDE" target="_blank" rel="noopener"><p class="who"><span>CHEMISTRY<br>CHEMISTRY in SUNTORY HALL [DVD]</span></p><div class="jk"><img src="img/jkt-suntory.jpg" alt="CHEMISTRY / CHEMISTRY in SUNTORY HALL [DVD]" loading="lazy"></div></a><p class="cr">sound direction</p></li><li><a href="https://www.amazon.co.jp/dp/B0000AFONU" target="_blank" rel="noopener"><p class="who"><span>CHEMISTRY<br>Two as We Stand~Live and Documentary 2002-2003~ [DVD]</span></p><div class="jk"><img src="img/jkt-twoaswe.jpg" alt="CHEMISTRY / Two as We Stand~Live and Documentary 2002-2003~ [DVD]" loading="lazy"></div></a><p class="cr">sound direction</p></li><li><a href="https://itunes.apple.com/jp/album/happy-enjoy-fresh/326512500" target="_blank" rel="noopener"><p class="who"><span>YA-KYIM<br>HAPPY!ENJOY!FRESH!</span></p><div class="jk"><img src="img/jkt-yakyim.jpg" alt="YA-KYIM / HAPPY!ENJOY!FRESH!" loading="lazy"></div></a><p class="cr">M4,7,10,11,12,13<br>direction,edit</p></li></ul><h3>lyrics</h3><ul class="grid"><li><a href="https://itunes.apple.com/jp/album/sexy-sexy-sexy-ep/1261239834" target="_blank" rel="noopener"><p class="who"><span>UNIONE<br>SEXY SEXY SEXY</span></p><div class="jk"><img src="img/jkt-sexy.jpg" alt="UNIONE / SEXY SEXY SEXY" loading="lazy"></div></a><p class="cr">「MY GIRL」*co-write</p></li><li><a href="https://itunes.apple.com/jp/album/one-sided-love-ep/1126757946" target="_blank" rel="noopener"><p class="who"><span>UNIONE<br>One Sided Love</span></p><div class="jk"><img src="img/jkt-one-sided-love.jpg" alt="UNIONE / One Sided Love" loading="lazy"></div></a><p class="cr">「One Sided Love」<br>「Sci-Fi Girl」</p></li><li><a href="https://itunes.apple.com/jp/album/%E3%83%AD%E3%83%B3%E3%83%87%E3%82%A3-special-pack-ep/1292281440" target="_blank" rel="noopener"><p class="who"><span>UNIONE<br>ロンディ</span></p><div class="jk"><img src="img/jkt-rondi.jpg" alt="UNIONE / ロンディ" loading="lazy"></div></a><p class="cr">「Hello,Brand-New World」<br>  *co-write</p></li><li><a href="https://www.amazon.co.jp/dp/B00156ZY22" target="_blank" rel="noopener"><p class="who"><span>郷ひろみ<br>君だけを feat.童子-T</span></p><div class="jk"><img src="img/jkt-kimidake.jpg" alt="郷ひろみ / 君だけを feat.童子-T" loading="lazy"></div></a><p class="cr">「Somebody stop me」</p></li><li><a href="https://music.apple.com/jp/album/best-of-jimama-%E5%90%9B%E3%81%AB%E8%B4%88%E3%82%8B%E3%81%86%E3%81%9F/1536260163" target="_blank" rel="noopener"><p class="who"><span>ji ma ma<br>裸足　からびさー</span></p><div class="jk"><img src="img/jkt-jimama.jpg" alt="ji ma ma / 裸足　からびさー" loading="lazy"></div></a><p class="cr">「風便り」*co-write</p></li><li><div class="nolink"><p class="who"><span>GREEN STYLE BAND<br>パパママ・プリーズ！</span></p><div class="jk"><img src="img/jkt-green-style-band.jpg" alt="GREEN STYLE BAND / パパママ・プリーズ！" loading="lazy"></div></div><p class="cr">「パパママ・プリーズ！」<br>「ぶんべつROCK」</p></li><li><div class="nolink"><p class="who"><span>UNIONE<br>greetings</span></p><div class="jk"><img src="img/jkt-greetings.jpg" alt="UNIONE / greetings" loading="lazy"></div></div><p class="cr">M1-4</p></li><li><a href="https://music.apple.com/jp/album/route-u/1849898568" target="_blank" rel="noopener"><p class="who"><span>陽真<br>Route U</span></p><div class="jk"><img src="img/jkt-route-u.jpg" alt="陽真 / Route U" loading="lazy"></div></a><p class="cr">M4.M7</p></li></ul>
+<h3>label / management</h3>
+<div class="lm"><div class="lmg"><h4>sleepy.ab</h4><ul class="grid sm"><li><a href="https://itunes.apple.com/jp/album/neuron/588933599" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-neuron.jpg" alt="sleepy.ab 「neuron」" loading="lazy"></div></a><p class="cr">「neuron」<br>label,management</p></li><li><a href="https://itunes.apple.com/jp/album/mother-goose/418701951" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-mothergoose.jpg" alt="sleepy.ab 「Mother Goose」" loading="lazy"></div></a><p class="cr">「Mother Goose」<br>management</p></li><li><a href="https://itunes.apple.com/jp/album/paratroop/340345554" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-paratroop.jpg" alt="sleepy.ab 「paratroop」" loading="lazy"></div></a><p class="cr">「paratroop」<br>management</p></li><li><a href="https://itunes.apple.com/jp/album/archive/271990022" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-archive.jpg" alt="sleepy.ab 「archive」" loading="lazy"></div></a><p class="cr">「archive」<br>management</p></li><li><a href="https://itunes.apple.com/jp/album/fantasia/217910772" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-fantasia.jpg" alt="sleepy.ab 「fantasia」" loading="lazy"></div></a><p class="cr">「fantasia」<br>management</p></li><li><a href="https://itunes.apple.com/jp/album/palette/127218636" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-palette.jpg" alt="sleepy.ab 「palette」" loading="lazy"></div></a><p class="cr">「palette」<br>management</p></li></ul></div><div class="lmg"><h4>sleepy.ac</h4><ul class="grid sm"><li><a href="https://itunes.apple.com/jp/album/live-gloria-chapel/820185247" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-gloria.jpg" alt="sleepy.ac 「@Gloria Chapel」" loading="lazy"></div></a><p class="cr">「@Gloria Chapel」<br>label,management</p></li><li><a href="https://itunes.apple.com/jp/album/live-sapporo-kitara/390116238" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-kitara.jpg" alt="sleepy.ac 「@Sapporo Kitara」" loading="lazy"></div></a><p class="cr">「@Sapporo Kitara」<br>management</p></li><li><a href="http://sleepyab.shop-pro.jp/" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-concarino.jpg" alt="sleepy.ac 「@Sapporo Concarino」" loading="lazy"></div></a><p class="cr">「@Sapporo Concarino」<br>management</p></li><li><a href="http://sleepyab.shop-pro.jp/" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-artpark.jpg" alt="sleepy.ac 「@Sapporo Artpark」" loading="lazy"></div></a><p class="cr">「@Sapporo Artpark」<br>management</p></li></ul></div><div class="lmg"><h4>Neat&#x27;s</h4><ul class="grid sm"><li><a href="https://itunes.apple.com/jp/album/moa/883173531" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-moa.jpg" alt="Neat&#x27;s 「MOA」" loading="lazy"></div></a><p class="cr">「MOA」<br>label,management</p></li><li><a href="https://itunes.apple.com/jp/album/modern-times/592342085" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-modern.jpg" alt="Neat&#x27;s 「MODERN TIMES」" loading="lazy"></div></a><p class="cr">「MODERN TIMES」</p></li><li><a href="https://itunes.apple.com/jp/album/wonders/491253471" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-wonders.jpg" alt="Neat&#x27;s 「Wonders」" loading="lazy"></div></a><p class="cr">「Wonders」</p></li><li><a href="http://neats.shop-pro.jp/?pid=87779876" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-bedroom.jpg" alt="Neat&#x27;s 「Bedroom Orchestra」Ⅰ&amp; Ⅱ" loading="lazy"></div></a><p class="cr">「Bedroom Orchestra」Ⅰ&amp; Ⅱ</p></li></ul></div><div class="lmg"><h4>Hello,Wendy!</h4><ul class="grid sm"><li><a href="https://music.apple.com/jp/artist/hello-wendy/1385286643" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-hellowendy.jpg" alt="Hello,Wendy! 「Hello,Wendy!」" loading="lazy"></div></a><p class="cr">「Hello,Wendy!」<br>management</p></li></ul></div><div class="lmg"><h4>Compilation</h4><ul class="grid sm"><li><a href="https://musicaallegra.stores.jp/items/524bc2503e7a4ae8bc000197" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-nacht.jpg" alt="Compilation 「ナハト・ムジィク」" loading="lazy"></div></a><p class="cr">「ナハト・ムジィク」<br>label</p></li></ul></div><div class="lmg"><h4>sleepy.ab[DVD]</h4><ul class="grid sm"><li><a href="https://itunes.apple.com/jp/album/mother-goose-live/448647123" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-mglive.jpg" alt="sleepy.ab[DVD] 「Mother Goose Live」" loading="lazy"></div></a><p class="cr">「Mother Goose Live」<br>management</p></li></ul></div><div class="lmg"><h4>sleepy.ac[CD+DVD]</h4><ul class="grid sm"><li><a href="http://sleepyab.shop-pro.jp/" target="_blank" rel="noopener"><div class="jk"><img src="img/jkt-gloria-cddvd.jpg" alt="sleepy.ac[CD+DVD] 「@Gloria Chapel」" loading="lazy"></div></a><p class="cr">「@Gloria Chapel」<br>label,management</p></li></ul></div></div>
+<h3>sound track</h3>
+<ul class="sound"><li>NINJA SNOW HIGH LAND 人工オーロラ・ショー &quot;ボレアリゾン&quot; テーマ曲</li><li>J-WAVE STATION ID JiNGLE</li><li>カンナさん、大成功です！ / 劇場映画</li><li>おいしいタイミング / 舞台</li><li>KIRIN Met&#x27;s / CF</li><li>サントリー　角瓶 / CF</li><li>JFL(J-WAVE,FM802,North Wave,Zip FM,Cross FM / FM CP<br>　featuring : CHEMISTRY,奥田民生,BONNIE PINK, JAKE SHIMABUKURO,SKA PARA HORNS</li><li>ピクデコ / スマホアプリ</li></ul>
+</div></section>
+</div>
+</main>
+
+<footer class="bar"><div class="wrap">
+ <div>
+  <a class="brand" href="./"><img src="img/logo.jpg" alt="" width="44" height="65"><span><b>musica allegra</b><i>produce / recording / edit / mix /</i></span></a>
+ </div>
+ <nav aria-label="メインメニュー">
+  <a href="./">Home</a>
+  <a href="equipments.html">Equipments</a>
+  <a href="works.html" aria-current="page">Works</a>
+  <a href="menu.html">Menu</a>
+  <a href="contact.html">Contact</a>
+  <a href="news.html">News</a>
+ </nav>
+</div></footer>
+</body>
+</html>
